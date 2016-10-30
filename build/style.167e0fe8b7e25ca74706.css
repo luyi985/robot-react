@@ -785,68 +785,44 @@ td,th {
   border-bottom-width: 0;
 }
 
-@font-face {
-  font-family: tongtong;
-  src: url(font/1d286f64d5d565f433e446113d3b975b.eot);
-  src: url(font/1d286f64d5d565f433e446113d3b975b.eot?#iefix) format("embedded-opentype"),url(font/8417bea92f0bf228974ae1e766387505.woff) format("woff"),url(font/ef090305608a7c7242d39e6616e3dea1.ttf) format("truetype"),url(46661d6d65debc63884004fed6e37e5c.svg#tongtong) format("svg");
-  font-weight: 400;
-  font-style: normal;
-}
-
-[data-icon]:before {
-  content: attr(data-icon);
-}
-
-[class*=" icon-"]:before,[class^=icon-]:before,[data-icon]:before {
-  font-family: tongtong!important;
-  font-style: normal!important;
-  font-weight: 400!important;
-  font-variant: normal!important;
-  text-transform: none!important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-close:before {
-  content: "a";
-}
-
-.icon-warning:before {
-  content: "c";
-}
-
-.icon-circle-down:before {
-  content: "d";
-}
-
-.icon-play-circle:before {
-  content: "e";
-}
-
-.icon-search:before {
-  content: "g";
-}
-
-.icon-home:before {
-  content: "h";
-}
-
-.icon-video:before {
-  content: "i";
-}
-
 body,html {
   width: 100%;
   min-height: 100%;
 }
 
 body {
-  background-color: #333;
-  color: #fff;
-  background-image: url(850248c706f5c83704c560c8d598d1a6.jpg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-color: #fff;
+  color: #000;
 }
-/*# sourceMappingURL=style.6bccc201d723b63549bd.css.map*/
+
+.table-top .cell {
+  border: 1px solid #000;
+}
+
+.table-top .cell:hover {
+  background-color: #ddd;
+}
+
+.table-top .cell.move-to .cell-inner {
+  opacity: 1;
+}
+
+.table-top .cell-inner {
+  cursor: pointer;
+  transition: opacity .3s ease-in-out;
+  opacity: 0;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  color: #000;
+  text-align: center;
+}
+
+.table-top .cell-inner i {
+  font-size: 25px;
+  display: inline-block;
+  line-height: 1;
+  position: relative;
+  top: 12.5px;
+}
+/*# sourceMappingURL=style.167e0fe8b7e25ca74706.css.map*/

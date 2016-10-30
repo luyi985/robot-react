@@ -32,3 +32,22 @@ export function place(){
 		type: PLACE
 	}
 }
+
+
+
+function select(){
+	let list=[];
+	list.push(MOVE);
+	list.push(LEFT);
+	list.push(RIGHT);
+	return list[Math.floor(Math.random()*list.length)];
+}
+
+export function run(){
+	var time=null;
+	return (dispatch,getState)=>{
+		 time= setInterval(function(){
+		 	dispatch({type: select()});
+		 },500)
+	}
+}
